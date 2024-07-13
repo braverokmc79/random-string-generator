@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>랜덤 문자열 생성기</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    .input-box {
+      width: 40px;
+      text-align: center;
+      margin: 2px;
+    }
+    .disabled {
+      background-color: lightgrey;
+    }
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 960px;
+    }
+    .btn {
+      margin-top: 10px;
+    }
+    h1, h3 {
+      color: #343a40;
+    }
+    .alert-info {
+      color: #0c5460;
+      background-color: #d1ecf1;
+      border-color: #bee5eb;
+    }
+    .num2 {
+      margin-top: 100px;
+    }
+    #setLengthBtn{
+      position: relative !important;
+      top: -7px !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-12 mb-5">
+        <h1 class="mb-4">랜덤 문자열 생성기</h1>
+        
+        <div class="mb-5">
+          <h3>1. 완전 랜덤 문자열 생성</h3>
+          <button id="generateFullRandomBtn" class="btn btn-primary mb-3">완전 랜덤 문자열 생성</button>
+          <p id="fullRandomResult" class="alert alert-info"></p>
+          <button id="copyResultBtn1" class="btn btn-outline-secondary">복사</button>
+        </div> 
+      </div>
+
+      <div class="col-12 mt-5 num2">
+        <h3 class="mt-5">2. 고정 문자로 문자열 생성</h3>
+        <div class="mb-3">
+          <label for="lengthInput" class="form-label">길이 설정 (1-27): </label>
+          <input type="number" id="lengthInput" min="1" max="27" value="27" class="form-control w-25 d-inline">
+          <button id="setLengthBtn" class="btn btn-secondary" >길이 설정</button>
+        </div>
+      </div>
+          
+      <div class="col-12">
+        <div id="inputContainer" class="mb-3"></div>
+        <button id="generateFixedRandomBtn" class="btn btn-success mb-3">고정 문자로 문자열 생성</button>
+        <p id="fixedRandomResult" class="alert alert-info"></p>
+        <button id="copyResultBtn2" class="btn btn-outline-secondary">복사</button>
+      </div>
+    </div>
+  </div>
+  <div class="mt-5 mb-5">&nbsp;</div>
+  
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
